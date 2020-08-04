@@ -32,7 +32,7 @@
               Welcome, {{request.user.username|upper}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="{% url 'landing:profile' %}">Profile</a>
               <a class="dropdown-item" href="#">My Courses </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'landing:logout' %}">Log Out</a>

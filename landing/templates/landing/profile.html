@@ -1,0 +1,23 @@
+{% extends 'landing/base.html' %}
+
+{% block content %}
+
+
+<div class="card">
+    <div class="card-body">
+        <img src="{{ request.user.profile_pic.url }}" alt="" class="card-img-top">
+        <h2 class="card-title">
+            Welcome, {{user.first_name}} {{user.last_name}}
+        </h2>
+        <h4 class="card-title">
+            Your registered Email Address is: <span style="color: blueviolet;">{{ user.email}}</span>
+        </h4>
+        <p class="card-text">
+            Currently you have not enrolled to any courses.
+            <br> Checkout the <a href="{% url 'courses:all_courses' %}" class="link"> courses </a> page.
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}

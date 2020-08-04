@@ -12,6 +12,7 @@ urlpatterns = [
      path('signup/',views.signupUser,name="signup"),
      path('about/',views.about,name="about"),
      path('logout/',views.logoutUser,name="logout"),
+     path('profile/',views.studentProfile,name="profile"),
 
      path('password_reset/',
           auth_views.PasswordResetView.as_view(template_name='landing/password_reset.html',success_url=reverse_lazy('landing:password_reset_done')),
